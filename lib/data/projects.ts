@@ -7,6 +7,11 @@ export interface Project {
   longDescription: string[]
   tech: string[]
   features: string[]
+  images?: {
+    thumbnail?: string
+    gallery?: string[]
+    og?: string
+  }
   links?: {
     live?: string
     github?: string

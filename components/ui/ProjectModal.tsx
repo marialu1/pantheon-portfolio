@@ -63,13 +63,13 @@ export default function ProjectModal({ project, isOpen, onClose, accentColor = '
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fadeIn"
+      className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80 backdrop-blur-sm animate-fadeIn"
       onClick={onClose}
     >
       <div
         className={`
-          relative w-full max-w-4xl max-h-[90vh] overflow-y-auto
-          bg-slate-900 rounded-2xl border-2 ${colors.border}
+          relative w-full max-w-4xl max-h-[95vh] sm:max-h-[90vh] overflow-y-auto
+          bg-slate-900 rounded-xl sm:rounded-2xl border-2 ${colors.border}
           shadow-2xl animate-slideUp
         `}
         onClick={(e) => e.stopPropagation()}
@@ -77,7 +77,7 @@ export default function ProjectModal({ project, isOpen, onClose, accentColor = '
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors"
+          className="sticky top-2 sm:absolute sm:top-4 right-2 sm:right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white transition-colors ml-auto mr-2 sm:mr-0 mb-2 sm:mb-0"
           aria-label="Close"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -86,14 +86,14 @@ export default function ProjectModal({ project, isOpen, onClose, accentColor = '
         </button>
 
         {/* Content */}
-        <div className="p-8">
+        <div className="p-4 sm:p-6 md:p-8">
           {/* Header */}
           <div className="mb-6">
-            <div className="flex items-center gap-3 mb-2">
-              <h2 className={`text-4xl font-bold ${colors.text}`}>{project.title}</h2>
-              <span className="text-sm text-slate-500">{project.year}</span>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-2">
+              <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold ${colors.text}`}>{project.title}</h2>
+              <span className="text-xs sm:text-sm text-slate-500">{project.year}</span>
             </div>
-            <p className="text-xl text-slate-300">{project.subtitle}</p>
+            <p className="text-lg sm:text-xl text-slate-300">{project.subtitle}</p>
           </div>
 
           {/* Description */}

@@ -61,11 +61,21 @@ export default function ProjectCard({ project, onSelect, accentColor = 'blue' }:
         border-2 ${colors.border} ${colors.glow}
         transition-all duration-300 cursor-pointer
         hover:scale-[1.02] hover:shadow-2xl
+        focus-within:outline-none focus-within:ring-4 focus-within:ring-${accentColor}-500/50
         ${isHovered ? 'translate-y-[-4px]' : ''}
       `}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={() => onSelect(project)}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          onSelect(project)
+        }
+      }}
+      tabIndex={0}
+      role="button"
+      aria-label={`View details for ${project.title}`}
     >
       {/* Status Badge */}
       <div className="absolute top-3 right-3">
