@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏛️ The Pantheon - Interactive Portfolio
 
-## Getting Started
+> **A mythological journey through my work**
+> Four chambers. Four gods. One developer.
 
-First, run the development server:
+**Live:** Coming soon
+**Status:** MVP Complete ✅
+**Built:** January 2025
+
+---
+
+## 🎯 Concept
+
+The Pantheon is an interactive portfolio structured as a Greek temple with four distinct chambers, each representing different facets of my work and personality:
+
+### ⚔️ Athena's Chamber - Tech & AI
+**Wisdom • Strategy • Technology**
+- EventFlow (AI-powered event planning)
+- Caroline AI (intelligent assistant)
+- Technical projects & engineering
+
+### 💖 Aphrodite's Gallery - Design
+**Beauty • Aesthetics • Form**
+- Interior design portfolio
+- 3D visualization
+- Visual design work
+
+### 🍷 Dionysus' Theatre - Creative
+**Creativity • Chaos • Celebration**
+- Christmas Murder Mystery 1926
+- Experimental projects
+- Creative side projects
+
+### ☀️ Apollo's Hall - Career
+**Order • Prophecy • Growth**
+- Career timeline
+- Skills & technologies
+- Dynamic CV generation
+
+---
+
+## 🛠️ Tech Stack
+
+**Framework:**
+- Next.js 15 (App Router)
+- React 18 + TypeScript
+- Tailwind CSS v4
+
+**3D (Coming Soon):**
+- React Three Fiber v9
+- Three.js
+- Drei helpers
+- GSAP for animations
+
+**AI Integration (Planned):**
+- Groq API for fast inference
+- RAG with vector DB
+- 4 personality-based chatbots
+
+---
+
+## 🚀 Getting Started
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Or with webpack (for shaders)
+npm run dev -- --webpack
+
+# Access at http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📊 Current Status
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### ✅ Completed
+- Next.js 15 + TypeScript + Tailwind v4
+- 4 chamber structure
+- Navigation system
+- Project data structure
+- Athena chamber (4 tech projects)
 
-## Learn More
+### 🚧 In Progress
+- 3D entrance with portals
+- Content for all chambers
 
-To learn more about Next.js, take a look at the following resources:
+### 📋 Planned
+- AI chatbot integration
+- Dynamic CV generator
+- SEO & performance optimization
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Status:** 🚧 Under active development
+**Last Updated:** January 5, 2025
+**Version:** 1.0.0 (MVP)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🏛️ _"Four gods, one journey. Welcome to The Pantheon."_
