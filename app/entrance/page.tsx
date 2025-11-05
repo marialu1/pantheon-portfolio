@@ -1,6 +1,6 @@
 'use client'
 
-export default function Home() {
+export default function EntranceSimple() {
   return (
     <div className="flex h-screen w-screen flex-col items-center justify-center bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       <div className="text-center space-y-8">
@@ -53,8 +53,8 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="mt-12 text-sm text-slate-500">
-          <p>💡 3D version with floating portals coming soon</p>
+        <div className="mt-12 text-sm text-slate-600">
+          <p>Interactive 3D version: <a href="/" className="text-blue-400 hover:text-blue-300">Click here</a></p>
         </div>
       </div>
     </div>
