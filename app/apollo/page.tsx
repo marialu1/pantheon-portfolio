@@ -1,32 +1,57 @@
 'use client'
 
+import { useState } from 'react'
+import { Project, getProjectsByChamber } from '@/lib/data/projects'
+import ProjectCard from '@/components/ui/ProjectCard'
+import ProjectModal from '@/components/ui/ProjectModal'
+
 export default function Apollo() {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+  const apolloProjects = getProjectsByChamber('apollo')
+
   return (
-    <div className="flex h-screen w-screen flex-col items-center justify-center bg-gradient-to-b from-amber-950 via-slate-900 to-slate-950">
-      <div className="text-center space-y-6">
+    <div className="min-h-screen w-full bg-gradient-to-b from-amber-950 via-slate-900 to-slate-950 py-12 px-6">
+      {/* Header */}
+      <div className="max-w-6xl mx-auto text-center space-y-6 mb-12">
         <h1 className="text-6xl font-bold text-amber-400">☀️ APOLLO'S HALL</h1>
         <p className="text-xl text-amber-300">Order • Prophecy • Career</p>
+        <p className="text-slate-400 max-w-2xl mx-auto">
+          Where past meets future. A structured timeline of professional growth,
+          skills mastery, and the journey toward excellence.
+        </p>
+      </div>
 
-        <div className="mt-12 max-w-4xl">
-          <div className="rounded-lg bg-amber-500/20 p-12 border border-amber-500/30">
-            <h3 className="text-3xl font-bold text-amber-300 mb-4">Coming Soon</h3>
-            <p className="text-slate-400 text-lg">
-              Career timeline, skills, certifications, and future vision
-            </p>
-            <div className="mt-8 text-slate-500">
-              <p>• Professional Timeline</p>
-              <p>• Skills & Technologies</p>
-              <p>• Certifications & Education</p>
-              <p>• Dynamic CV Generator</p>
-            </div>
-          </div>
-        </div>
+      {/* Projects Grid */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        {apolloProjects.map((project) => (
+          <ProjectCard
+            key={project.id}
+            project={project}
+            onSelect={setSelectedProject}
+            accentColor="amber"
+          />
+        ))}
+      </div>
 
-        <div className="mt-12">
-          <a href="/" className="text-slate-400 hover:text-slate-300 text-lg">
-            ← Return to Entrance
-          </a>
-        </div>
+      {/* Navigation */}
+      <div className="max-w-6xl mx-auto text-center">
+        <a href="/" className="text-slate-400 hover:text-slate-300 transition-colors">
+          ← Return to Entrance
+        </a>
+      </div>
+
+      {/* Project Modal */}
+      <ProjectModal
+        project={selectedProject}
+        isOpen={!!selectedProject}
+        onClose={() => setSelectedProject(null)}
+        accentColor="amber"
+      />
+
+      {/* Debug Info */}
+      <div className="absolute bottom-4 right-4 text-xs text-slate-600">
+        <p>Chamber: Apollo | Projects: {apolloProjects.length}</p>
+        <p>The path illuminated...</p>
       </div>
     </div>
   )
